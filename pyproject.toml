@@ -17,6 +17,12 @@ pytest-asyncio = "^0.23.7"
 pre-commit = "^3.7.1"
 
 
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^0.23.7"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
