@@ -24,8 +24,8 @@ def mongo_client():
 @pytest.fixture(autouse=True)
 async def clear_collections(mongo_client):
     yield
-    collection_list_names = await mongo_client.get_database().list_collection_names()
-    for collection_name in collection_list_names:
+    collection_names = await mongo_client.get_database().list_collection_names()
+    for collection_name in collection_names:
         if collection_name.startswith("system"):
             continue
 
@@ -72,4 +72,4 @@ def products_in():
 
 @pytest.fixture
 async def products_inserted(products_in):
-    return [await product_usecase.create(body=product) for product in products_in]
+    return [await product_usecase.create(body=product_in) for product_in in products_in]

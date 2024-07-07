@@ -3,7 +3,7 @@ from decimal import Decimal
 from bson import Decimal128
 from typing import Any
 from datetime import datetime
-from pydantic import BaseModel, UUID4, Field, model_serializer
+from pydantic import UUID4, BaseModel, Field, model_serializer
 
 
 class CreateBaseModel(BaseModel):

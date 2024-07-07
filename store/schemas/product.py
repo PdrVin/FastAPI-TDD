@@ -28,7 +28,7 @@ def convert_decimal_128(value):
 Decimal_ = Annotated[Decimal, AfterValidator(convert_decimal_128)]
 
 
-class ProductUpdate(ProductBase):
+class ProductUpdate(BaseSchemaMixin):
     quantity: Optional[int] = Field(None, description="Product Quantity")
     price: Optional[Decimal_] = Field(None, description="Product Price")
     status: Optional[bool] = Field(None, description="Product Status")
