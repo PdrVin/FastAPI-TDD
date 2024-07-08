@@ -1,6 +1,12 @@
 # Store API
 
-Este projeto é uma API para gerenciamento de produtos baseada em TDD (Test-Driven Development) usando FastAPI, Pydantic, Motor (MongoDB) e pytest. A API permite criar, ler, atualizar e deletar produtos.
+Este projeto é uma API para gerenciamento de produtos baseada em TDD (Test-Driven Development) usando FastAPI, Pydantic, Motor (MongoDB) e pytest.
+
+A API permite:
+- Cadastrar
+- Buscar
+- Atualizar
+- Deletar
 
 ## Requisitos
 - Python 3.9+
